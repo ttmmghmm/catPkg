@@ -1,3 +1,8 @@
+<!--
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{Put the title of your vignette here}
+-->
+
 ---
 title: "catPkg"
 author: "me"
