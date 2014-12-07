@@ -2,34 +2,23 @@
 \alias{catPkg-package}
 \alias{catPkg}
 \docType{package}
-\title{
-Sample test package
-}
-\description{
-See http://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
-}
+\title{What the package does (short line)}
+\description{More about what it does (maybe more than one line)}
 \details{
-\tabular{ll}{
-Package: \tab catPkg\cr
+\tabular{ll}{Package: \tab catPkg\cr
 Type: \tab Package\cr
+Title: \tab What the package does (short line)\cr
 Version: \tab 1.0\cr
 Date: \tab 2014-12-07\cr
-License: \tab What license is it under?\cr
+Author: \tab Who wrote it\cr
+Maintainer: \tab John Gavin <john.b.gavin+catPkgMaintainer@gmail.com>\cr
+Suggests: \tab 
+knitr\cr
+VignetteBuilder: \tab knitr\cr
+License: \tab GPL-3\cr}
 }
-Details go here.
-}
-\author{
-Who wrote it - me.
+\author{Who wrote it}
 
-Maintainer: Who to complain to <yourfault@somewhere.net>
-}
-\references{
-http://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
-}
 \keyword{ package }
-%\seealso{
-%%~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-%}
-%\examples{
-%%~~ simple examples of the most important functions ~~
-%}
+
+
