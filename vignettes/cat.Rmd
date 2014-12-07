@@ -58,7 +58,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 ## (Bonus) Step 6: Make the package a GitHub repo
 This isn’t a post about learning to use git and GitHub — for that I recommend Karl Broman’s Git/GitHub Guide. The benefit, however, to putting your package onto GitHub is that you can use the devtools install_github() function to install your new package directly from the GitHub page.
 
-```{r}
+```{r} 
 install_github('JohnGavin/catPkg')
 ```
 
