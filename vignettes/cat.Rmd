@@ -23,6 +23,13 @@ opts_chunk$set(eval = FALSE)
 
 (http://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)
 
+```{r, eval = FALSE}
+install.packages("inlinedocs",repos="http://r-forge.r-project.org")
+library(inlinedocs)
+package.skeleton.dx("/path/to/your/pkgdir")
+```
+
+
 ```{r}
 # install.packages("devtools")
 library("devtools")

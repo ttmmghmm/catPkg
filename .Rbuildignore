@@ -1,5 +1,5 @@
-^.*\.Rhistory$
-^.*\.gitignore$
-^.*\.git$
+^\.RData$
+^\.Rhistory$
+^\.git.*$
 ^.*\.Rproj$
 ^\.Rproj\.user$
