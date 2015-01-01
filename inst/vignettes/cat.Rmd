@@ -8,6 +8,11 @@ title: "catPkg"
 author: "me"
 date: "12/7/2014"
 output:
+  html_document:
+    keep_md: yes
+    number_sections: yes
+    self_contained: no
+    toc: yes
   pdf_document:
     keep_tex: yes
 ---
@@ -89,5 +94,6 @@ This is not a post about learning to use git and GitHub - for that I recommend K
 
 ```{rsdfsd, eval=FALSE} 
 # f
+library(devtools)
 install_github('JohnGavin/catPkg')
 ```
