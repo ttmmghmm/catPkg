@@ -3,5 +3,6 @@
 ^\.git.*$
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^\.travis\.yml$
+^.*\.yml$
 ^travis.*$
+^.*\.md$
