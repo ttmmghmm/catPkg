@@ -12,11 +12,25 @@ ui <- fluidPage(
         choices = sort(sample(ls("package:datasets")  , size = 50)),
         selected = sample(ls("package:datasets"), size = 1) )), # tail(letters))),
     mainPanel(
-      verbatimTextOutput("dump"),
-      plotOutput("plot"),
-      tableOutput("table")
-    ))
-) 
+      tabsetPanel(
+        tabPanel(
+           "Str", 
+           verbatimTextOutput("dump")
+        ),
+        tabPanel(
+          title = "Plot",
+          plotOutput("plot")
+        ),
+        tabPanel(
+          title = "Table",
+          tableOutput("table")
+        )
+#       verbatimTextOutput("dump"),
+#        plotOutput("plot"),
+#        tableOutput("table")
+    )
+    )
+))
 
 server <- function(input, output, session) {
   output$dump = renderPrint({
@@ -28,9 +42,9 @@ server <- function(input, output, session) {
     plot(dataset)
   })
   output$table = renderTable({
-    dataset <- get(input$dataset, "package:datasets", inherits = FALSE)
-    table(dataset)
-  })
+   dataset <- get(input$dataset, "package:datasets", inherits = FALSE)
+   table(dataset)
+ })
 }
 
 shinyApp(ui, server)
