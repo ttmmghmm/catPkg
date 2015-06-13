@@ -2,7 +2,7 @@
 
 library(shiny)
 
-ui <- "hello World!"
+ui <- fluidPage(h1("hello World!")) 
 
 server <- function(input, output, session) {}
 
