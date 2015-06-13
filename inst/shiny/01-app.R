@@ -13,7 +13,8 @@ ui <- fluidPage(
         selected = sample(ls("package:datasets"), size = 1) )), # tail(letters))),
     mainPanel(
       verbatimTextOutput("dump"),
-      plotOutput("plot")
+      plotOutput("plot"),
+      tableOutput("table")
     ))
 ) 
 
@@ -25,7 +26,11 @@ server <- function(input, output, session) {
   output$plot = renderPlot({
     dataset <- get(input$dataset, "package:datasets", inherits = FALSE)
     plot(dataset)
-    })
+  })
+  output$table = renderTable({
+    dataset <- get(input$dataset, "package:datasets", inherits = FALSE)
+    table(dataset)
+  })
 }
 
 shinyApp(ui, server)
