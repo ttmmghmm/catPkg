@@ -6,7 +6,11 @@ ui <- fluidPage(
   h1("hello World!"),
   sidebarLayout(
     sidebarPanel(
-      selectInput(inputId = "dataset", label = "Choose ...", choices = tail(letters))),
+      selectInput(
+        inputId = "dataset", 
+        label = "Choose ...", 
+        choices = sample(ls("package:datasets")  , size = 10),
+        selected = sample(ls("package:datasets"), size = 1) )), # tail(letters))),
     mainPanel())
 ) 
 
