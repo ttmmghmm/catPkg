@@ -9,11 +9,23 @@ ui <- fluidPage(
       selectInput(
         inputId = "dataset", 
         label = "Choose ...", 
-        choices = sample(ls("package:datasets")  , size = 10),
+        choices = sort(sample(ls("package:datasets")  , size = 50)),
         selected = sample(ls("package:datasets"), size = 1) )), # tail(letters))),
-    mainPanel())
+    mainPanel(
+      verbatimTextOutput("dump"),
+      plotOutput("plot")
+    ))
 ) 
 
-server <- function(input, output, session) {}
+server <- function(input, output, session) {
+  output$dump = renderPrint({
+    dataset <- get(input$dataset, "package:datasets", inherits = FALSE)
+    str(dataset)
+  })
+  output$plot = renderPlot({
+    dataset <- get(input$dataset, "package:datasets", inherits = FALSE)
+    plot(dataset)
+    })
+}
 
 shinyApp(ui, server)
