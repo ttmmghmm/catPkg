@@ -2,7 +2,13 @@
 
 library(shiny)
 
-ui <- fluidPage(h1("hello World!")) 
+ui <- fluidPage(
+  h1("hello World!"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(inputId = "dataset", label = "Choose ...", choices = tail(letters))),
+    mainPanel())
+) 
 
 server <- function(input, output, session) {}
 
