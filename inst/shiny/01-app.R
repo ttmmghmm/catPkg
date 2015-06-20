@@ -44,7 +44,7 @@ server <- function(input, output, session) {
   output$table = renderTable({
    dataset <- get(input$dataset, "package:datasets", inherits = FALSE)
    table(dataset)
- })
+ }) 
 }
 
 shinyApp(ui, server)
